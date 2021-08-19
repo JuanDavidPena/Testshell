@@ -7,7 +7,6 @@ extern char **environ;
 
 /**Macros*/
 #define BUFSIZE 1024
-#define DELIM " \t\r\n\a"
 #define PRINTER(c) (write(STDOUT_FILENO, c, _strlen(c)))
 
 /**Libraries*/
@@ -67,7 +66,7 @@ int check_builtin(char **cmd);
 void creat_envi(char **envi);
 int check_cmd(char **tokens, char *line, int count, char **argv);
 void treat_file(char *line, int counter, FILE *fd, char **argv);
-void exit_bul_for_file(char **cmd, char *line, FILE *fd);
+void exit_bi_for_file(char **cmd, char *line, FILE *fd);
 
 /** Build-ins*/
 
@@ -77,13 +76,12 @@ int history_dis(char **cmd, int er);
 int dis_env(char **cmd, int er);
 int change_dir(char **cmd, int er);
 int display_help(char **cmd, int er);
-int echo_bul(char **cmd, int er);
-void  exit_bul(char **cmd, char *input, char **argv, int c);
+int echo_bi(char **cmd, int er);
+void  exit_bi(char **cmd, char *input, char **argv, int c);
 int print_echo(char **cmd);
 
 /** errors */
-void print_number(unsigned int n);
-void print_number_in(int n);
+void print_number(int n);
 void print_error(char *line, int c, char **argv);
 void _prerror(char **argv, int c, char **cmd);
 

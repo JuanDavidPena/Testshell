@@ -13,7 +13,7 @@ int handle_builtin(char **cmd, int st)
 		{"cd", change_dir},
 		{"env", dis_env},
 		{"help", display_help},
-		{"echo", echo_bul},
+		{"echo", echo_bi},
 		{"history", history_dis},
 		{NULL, NULL}
 	};
