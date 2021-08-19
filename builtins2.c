@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * history_dis - Display History Of User Input Simple Shell
- * @c:Parsed Command
- * @s:Statue Of Last Excute
+ * history_dis - display the history
+ * @cmd:tokens
+ * @s:Status of last execute
  * Return: 0 Succes -1 Fail
  */
-int history_dis(__attribute__((unused))char **c, __attribute__((unused))int s)
+int history_dis(__attribute__((unused))char **cmd, __attribute__((unused))int s)
 {
 	char *filename = ".simple_shell_history";
 	FILE *fp;
